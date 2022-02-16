@@ -1,14 +1,11 @@
+from api_yamdb.settings import VERIFICATION_EMAIL
 from django.core.mail import send_mail
 from django.utils import timezone
-
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 from rest_framework.generics import get_object_or_404
 from rest_framework.validators import UniqueValidator
-
 from reviews.models import Category, Comment, Genre, Review, Title, User
-
-from api_yamdb.settings import VERIFICATION_EMAIL
 
 
 class GenreSerializer(serializers.ModelSerializer):
