@@ -59,6 +59,7 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
+          sudo apt install docker.io
           sudo docker pull minibaevaidar/yamdb_final:v16.02.2022
           sudo docker-compose down -v
           touch .env
