@@ -43,8 +43,9 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2 
         with:
+          context: api_yamdb/
           push: true
-          tags: minibaevaidar/yamb:v16.02.2022
+          tags: minibaevaidar/yamdb_final:v16.02.2022
 
   deploy:
     runs-on: ubuntu-latest
