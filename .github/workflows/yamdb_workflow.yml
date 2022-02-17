@@ -22,6 +22,7 @@ jobs:
     - name: Test with flake8 and django tests
       run: |
         python -m flake8
+        pytest
         cd api_yamdb/
         python manage.py test
 
@@ -58,8 +59,8 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          sudo docker-compose stop
-          sudo docker-compose rm web
+          sudo docker pull minibaevaidar/yamdb_final:v16.02.2022
+          sudo docker-compose down -v
           touch .env
           echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
           echo DB_NAME=${{ secrets.DB_NAME }} >> .env
@@ -68,6 +69,8 @@ jobs:
           echo DB_HOST=${{ secrets.DB_HOST }} >> .env
           echo DB_PORT=${{ secrets.DB_PORT }} >> .env
           sudo docker-compose up -d
+          sudo docker-compose exec web python manage.py migrate
+          sudo docker-compose exec -T web python manage.py collectstatic --no-input
 
   send_message:
     runs-on: ubuntu-latest
