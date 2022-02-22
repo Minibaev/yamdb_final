@@ -11,7 +11,9 @@ services:
 
   web:
     image: minibaevaidar/yamdb_final:v16.02.2022
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: always
     volumes:
       - static_value:/app/static/
