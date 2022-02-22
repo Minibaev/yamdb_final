@@ -18,4 +18,4 @@
 ​
 Скопируйте файлы docker-compose.yaml и nginx/default.conf из вашего проекта на сервер в home/<ваш_username>/docker-compose.yaml и home/<ваш_username>/nginx/default.conf соответственно.
 ​
-Оживший из этого кода сайт живет [здесь](http://51.250.16.52/admin/)
+Оживший из этого кода сайт живет [здесь](http://51.250.30.175/admin/)
