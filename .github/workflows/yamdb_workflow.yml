@@ -47,7 +47,7 @@ jobs:
           context: ./api_yamdb/
           file: ./api_yamdb/Dockerfile
           push: true
-          tags: minibaevaidar/yamb:v16.02.2022
+          tags: minibaevaidar/yamdb_final:v16.02.2022
 
   deploy:
     runs-on: ubuntu-latest
