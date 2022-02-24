@@ -12,7 +12,7 @@ services:
   web:
     image: minibaevaidar/yamdb_final:v16.02.2022
     build:
-      context: .
+      context: ../api_yamdb
       dockerfile: Dockerfile
     restart: always
     volumes:
