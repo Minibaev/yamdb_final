@@ -69,7 +69,7 @@
 ```sudo docker-compose exec -T web python manage.py migrate```
 ```sudo docker-compose exec -T web python manage.py collectstatic --no-input```
 
-Оживший из этого кода сайт живет [здесь](http://51.250.30.175/admin/)
+Оживший из этого кода сайт живет [здесь](http://51.250.16.52/admin/)
 
 
 # Технологии применяемые в работе
