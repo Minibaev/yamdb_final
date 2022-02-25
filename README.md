@@ -22,14 +22,19 @@
 
 Установка зависимостей из файла requirements и линтера flake8:
 
-```python -m pip install --upgrade pip``` 
-```pip install flake8 pep8-naming flake8-broken-line flake8-return``` ```flake8-isort```
-```pip install -r requirements.txt```
+```
+python -m pip install --upgrade pip
+pip install flake8 pep8-naming flake8-broken-line flake8-return
+flake8-isort
+pip install -r requirements.txt
+```
 
 Проверка кода на PEP8 и запуск pytest:
 
-```python -m flake8```
-```pytest```
+```
+python -m flake8
+pytest
+```
 
 
 Остановить службу: 
@@ -44,30 +49,36 @@
 
 Установить docker-compose
 
-```sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
-```sudo chmod +x /usr/local/bin/docker-compose```
-```docker-compose --version```
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+```
 
 Скопируйте файлы docker-compose.yaml и nginx/default.conf из вашего проекта на сервер в home/<ваш_username>/docker-compose.yaml и home/<ваш_username>/nginx/default.conf соответственно:
 
-```scp docker-compose.yaml _minibaev@51.250.30.175```
-```scp default.conf _minibaev@51.250.30.175:/nginx/```
+```
+scp docker-compose.yaml _minibaev@51.250.30.175
+scp default.conf _minibaev@51.250.30.175:/nginx/
+```
 
 Остановка docker-compose и создание и наполнение файла env на сервере:
 
-```sudo docker-compose stop```
-​```sudo docker-compose rm web```
-​```touch .env```
-```echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env```
-```echo DB_NAME=${{ secrets.DB_NAME }} >> .env```
-```echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env```
-```echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env```
-```echo DB_HOST=${{ secrets.DB_HOST }} >> .env```
-```echo DB_PORT=${{ secrets.DB_PORT }} >> .env```
-```sudo docker-compose up -d```
-```sudo docker-compose exec -T web python manage.py makemigrations```
-```sudo docker-compose exec -T web python manage.py migrate```
-```sudo docker-compose exec -T web python manage.py collectstatic --no-input```
+```
+sudo docker-compose stop
+sudo docker-compose rm web
+​touch .env
+echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
+echo DB_NAME=${{ secrets.DB_NAME }} >> .env
+echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
+echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
+echo DB_HOST=${{ secrets.DB_HOST }} >> .env
+echo DB_PORT=${{ secrets.DB_PORT }} >> .env
+sudo docker-compose up -d
+sudo docker-compose exec -T web python manage.py makemigrations
+sudo docker-compose exec -T web python manage.py migrate
+sudo docker-compose exec -T web python manage.py collectstatic --no-input
+```
 
 Оживший из этого кода сайт живет [здесь](http://51.250.16.52/admin/)
 
