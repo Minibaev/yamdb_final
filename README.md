@@ -7,7 +7,7 @@
 ​
 # Бейдж о статусе работы workflow
 
-```![example workflow](https://github.com/Minibaev/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)```
+![example workflow](https://github.com/Minibaev/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 
 # Пользовательские роли
