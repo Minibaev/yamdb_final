@@ -16,6 +16,8 @@ ALLOWED_HOSTS = [
     os.getenv('first', default='first'),
     os.getenv('second', default='second'),
     os.getenv('third', default='third'),
+    os.getenv('fourth', default='fourth'),
+    os.getenv('fifth', default='fifth'),
 ]
 
 INSTALLED_APPS = [
