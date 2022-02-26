@@ -13,9 +13,14 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='django.db.backends.postgresql')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'web:8000',
-    'web',
+    'localhost',
     '127.0.0.1',
+    '*',
+    os.getenv('first', default='first'),
+    os.getenv('second', default='second'),
+    os.getenv('third', default='third'),
+    os.getenv('fourth', default='fourth'),
+    os.getenv('fifth', default='fifth'),
     '51.250.16.52',
 ]
 
