@@ -12,13 +12,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='django.db.backends.postgresql')
 
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    os.getenv('first', default='first'),
-    os.getenv('second', default='second'),
-    os.getenv('third', default='third'),
-    os.getenv('fourth', default='fourth'),
-    'web',
-]
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
