@@ -22,6 +22,7 @@ ALLOWED_HOSTS = [
     os.getenv('fourth', default='fourth'),
     os.getenv('fifth', default='fifth'),
     '51.250.16.52',
+    'web',
 ]
 
 INSTALLED_APPS = [
