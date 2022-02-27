@@ -16,11 +16,6 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '*',
-    os.getenv('first', default='first'),
-    os.getenv('second', default='second'),
-    os.getenv('third', default='third'),
-    os.getenv('fourth', default='fourth'),
-    os.getenv('fifth', default='fifth'),
     '51.250.16.52',
     'web',
 ]
