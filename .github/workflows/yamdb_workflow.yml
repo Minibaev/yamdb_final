@@ -48,7 +48,7 @@ jobs:
           context: ./api_yamdb/
           file: ./api_yamdb/Dockerfile
           push: true
-          tags: minibaevaidar/milk:latest
+          tags: minibaevaidar/milk3:latest
 
   deploy:
     runs-on: ubuntu-latest
