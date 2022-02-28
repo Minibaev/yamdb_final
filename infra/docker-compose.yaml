@@ -10,7 +10,7 @@ services:
       - ./.env
 
   web:
-    image: minibaevaidar/milk3:latest
+    image: minibaevaidar/milk4:latest
     restart: always
     volumes:
       - static_value:/app/static/
