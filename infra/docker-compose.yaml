@@ -11,7 +11,7 @@ services:
 
   web: 
 
-    image: minibaevaidar/milk5:latest 
+    image: minibaevaidar/milk6:latest 
     restart: always 
     volumes: 
       - static_value:/var/html/static/
